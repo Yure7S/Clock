@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-repeat: no-repeat;
+    background-image: linear-gradient(45deg,#c6f2fd,#F7DBB0);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Content */
+.clock{
+    background-color: rgba(255, 255, 255, 0.0);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 
+    -5px -5px 10px rgba(255, 255, 255, 0.5),
+    5px 5px 10px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 10px rgba(255, 255, 255, 0.5),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.numbers{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 8px;
+    font-size: 18px;
+    transform: rotate(var(--rotation));
+}
+
+.clock .iten-1{
+    --rotation: 30deg;
+}
+
+.clock .iten-2{
+    --rotation: calc(30deg * 2);
+}
+
+.clock .iten-3{
+    --rotation: calc(30deg * 3);
+}
+
+.clock .iten-4{
+    --rotation: calc(30deg * 4);
+}
+
+.clock .iten-5{
+    --rotation: calc(30deg * 5);
+}
+
+.clock .iten-6{
+    --rotation: calc(30deg * 6);
+}
+
+.clock .iten-7{
+    --rotation: calc(30deg * 7);
+}
+
+.clock .iten-8{
+    --rotation: calc(30deg * 8);
+}
+
+.clock .iten-9{
+    --rotation: calc(30deg * 9);
+}
+
+.clock .iten-10{
+    --rotation: calc(30deg * 10);
+}
+
+.clock .iten-11{
+    --rotation: calc(30deg * 11);
+}
+
+/* Hand */
+.clock .hand{
+    position: absolute;
+    width: 2px;
+    background-color: black;
+    left: 50%;
+    bottom: 50%;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    /* O "transform-origin" serve para mudar o eixo de rotação do elemento */
+    transform-origin: bottom;
+}
+
+.clock .second{
+    background-color: red;
+    height: 40%;
+}
+
+.clock .minute{
+    height: 30%;
+    width: 2.5px;
+    clip-path: polygon(50% 0%, 99% 30%, 100% 100%, 0 99%, 0 30%);
+}
+
+.clock .hour{
+    height: 20%;
+    width: 4px;
+    clip-path: polygon(30% 0, 70% 0, 100% 100%, 0% 100%);
+    border-radius: 0px 0px 20% 20%;
+}
+
+.clock .disk{
+    background-color: red;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    transform: translateX(-25%);
+    transform-origin: initial;
+}
