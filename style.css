@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
 
 body{
@@ -16,8 +17,8 @@ body{
 /* Content */
 .clock{
     background-color: rgba(255, 255, 255, 0.0);
-    width: 90%;
-    height: 90vw;
+    width: 80%;
+    height: 80vw;
     max-width: 300px;
     max-height: 300px;
     border-radius: 50%;
@@ -97,24 +98,23 @@ body{
 }
 
 .clock .second{
-    background-color: red;
-    height: 40%;
+    background-color: rgb(255, 75, 75);
+    height: 37%;
 }
 
 .clock .minute{
     height: 30%;
     width: 2.5px;
-    clip-path: polygon(50% 0%, 99% 30%, 100% 100%, 0 99%, 0 30%);
+    clip-path: polygon(50% 0%, 99% 10%, 100% 100%, 0 99%, 0 10%);
 }
 
 .clock .hour{
     height: 20%;
-    width: 4px;
-    clip-path: polygon(30% 0, 70% 0, 100% 100%, 0% 100%);
-    border-radius: 0px 0px 20% 20%;
+    width: 3px;
+    border-radius: 2px;
 }
 
-.clock .disk{
+.clock .dis{
     background-color: red;
     height: 8px;
     width: 8px;

@@ -17,8 +17,8 @@ function setClock() {
     /* Capturando segundos datas e horas */
     /* Usando os métodos "getSeconds, " */
     const secondsPercentage = currentDate.getSeconds() / 60 /* Ao dividir por 60, a procentagem dos segundos é obtida */
-    const minutesPercentage = currentDate.getMinutes() / 60 /* Ao dividir por 60, a procentagem dos segundos é obtida */
-    const hoursPercentage = currentDate.getHours() / 24 /* Ao dividir por 60, a procentagem dos segundos é obtida */
+    const minutesPercentage = (secondsPercentage + currentDate.getMinutes()) / 60 /* Ao dividir por 60, a procentagem dos segundos é obtida */
+    const hoursPercentage = (minutesPercentage + currentDate.getHours()) / 24 /* Ao dividir por 60, a procentagem dos segundos é obtida */
 
     setRotation(handSecond, secondsPercentage)
     setRotation(handMinite, minutesPercentage)
